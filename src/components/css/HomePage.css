@@ -1,0 +1,31 @@
+.card .content div{
+    margin: 5px 0;
+}
+.card .content i{
+    margin-right: 5px;
+}
+
+.search .title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.search .subscript{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.search .btn{
+    background-color: #00B0FF;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    height: 3rem;
+    border-radius: 20px;
+}
+.search .btn:hover{
+    background-color: #33C0FF;
+}
+.tracks-layout .btn:hover{
+    background-color: #0091EA;
+}
+
+

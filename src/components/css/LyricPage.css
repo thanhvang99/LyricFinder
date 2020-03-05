@@ -1,0 +1,50 @@
+.LyricPage{
+    max-width: 1000px;
+    padding: 1rem 2rem;
+}
+.LyricPage .btn{
+    margin: 1rem 0;
+    align-self: flex-start;
+    padding: 10px;
+}
+
+.LyricPage .lyric{
+    border: 1px solid #8D8D8D;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-size: 1.15rem;
+}
+.LyricPage .lyric .info{
+    border-bottom: 1px solid #8D8D8D;
+    padding: 1rem 2rem;
+}
+.LyricPage .lyric .info .track-name{
+    font-size: 1.5rem;
+}
+.LyricPage .lyric .info .artist{
+    color: gray;
+    font-style: italic;
+
+}
+.LyricPage .lyric .body{
+    padding: 1rem 2rem;
+}
+.LyricPage .details{
+    border: 1px solid #8D8D8D;
+    align-self: stretch;
+    margin: 5rem 0;
+    border-radius: 10px;
+    font-size: 1.15rem;
+}
+
+.LyricPage .details div{
+    border-bottom: 1px solid #8D8D8D;
+    padding: 1rem 2rem;
+}
+.LyricPage .details div:last-child{
+    border-bottom: none;
+}
+/* .LyricPage .details div{ */
+/*     border: 1px solid blue; */
+/* } */
+

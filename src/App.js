@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/layout/Header.js";
+import Footer from "./components/layout/Footer.js";
+import HomePage from "./components/layout/HomePage.js";
+import LyricPage from "./components/layout/LyricPage.js";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import PageContext from './Context.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import "./components/css/Header.css";
+
+import { ContextProvider } from "./Context";
+
+class App extends Component {
+    render() {
+        console.log(`${process.env.REACT_APP_MM_KEY}`);
+        return (
+            <Router>
+                <Header />
+                <ContextProvider>
+                    <Switch>
+                        <Route exact path="/" component={HomePage} />
+                        <Route path="/lyrics/track/:id" component={LyricPage} />
+                    </Switch>
+                </ContextProvider>
+                <Footer />
+            </Router>
+        );
+    }
 }
+const Container = props => {
+    return (
+        <div
+            className={`${props.name}-container`}
+            style={{ "background-color": `${props.background}` }}
+        >
+            {props.children}
+        </div>
+    );
+};
 
 export default App;
+export { Container };
